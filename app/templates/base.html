@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="../static/style.css" type="text/css">
+</head>
+<body>
+    <header>
+        <div id="header_logo">Логотип</div>
+        <div id="header_menu"><a href="/">Форум</a>
+            {% if user %}
+            Здравствуйте, {{user['login']}}!
+            <a href="/logout">Выйти</a>
+            {% else %}
+            <div><a href="/login">Авторизация</a></div>
+            <div><a href="/registration">Регистрация</a></div>
+            {% endif %}
+        </div>
+    </header>
+
+    {% block content %}  {% endblock %}
+
+    <footer>Подвал</footer>
+</body>
+</html>

@@ -1,0 +1,13 @@
+header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: darkcyan;
+}
+
+#header_logo {
+    font-size: 25px;
+}
+
+#header_menu {
+    font-size: 20px;
+}

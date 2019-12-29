@@ -1,0 +1,9 @@
+{% extends "base.html" %} <!-- Устанавливает наследование между файлами -->
+{% block content %}
+<h1>Главная</h1>
+
+<br><br>
+{% for forum in forums %}
+<a href="/forums/{{forum['id']}}">{{forum['title']}}</a><br>
+{% endfor %}
+{% endblock %}
